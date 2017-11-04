@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<WebApplication1.Models.Customers>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "首頁";
 }
 
-<h2>Index</h2>
+<h2>首頁</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增客戶資料", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,7 +41,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Fax)
         </th>
-        <th></th>
+        <th style="column-width:100px">------</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -77,9 +77,9 @@
             @Html.DisplayFor(modelItem => item.Fax)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
+            @Html.ActionLink("編", "Edit", new { id=item.CustomerID }) |
+            @Html.ActionLink("詳", "Details", new { id=item.CustomerID }) |
+            @Html.ActionLink("刪", "Delete", new { id=item.CustomerID })
         </td>
     </tr>
 }
