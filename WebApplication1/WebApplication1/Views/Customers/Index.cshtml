@@ -77,9 +77,9 @@
             @Html.DisplayFor(modelItem => item.Fax)
         </td>
         <td>
-            @Html.ActionLink("編", "Edit", new { id=item.CustomerID }) |
-            @Html.ActionLink("詳", "Details", new { id=item.CustomerID }) |
-            @Html.ActionLink("刪", "Delete", new { id=item.CustomerID })
+            @Html.ActionLink("編", "Edit", new { id=item.CustomerID.TrimEnd() }) |
+            @Html.ActionLink("詳", "Details", new { id=item.CustomerID.TrimEnd() }) |
+            @Html.ActionLink("刪", "Delete", new { id=item.CustomerID.TrimEnd() })
         </td>
     </tr>
 }
